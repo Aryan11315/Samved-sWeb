@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Login</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+    }
+
+    .redbox {
+      background-color: red;
+      height: 60vh;
+      width: 30vw;
+      border-radius: 30px;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      gap: 30px;
+    }
+
+    .inputs {
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+    }
+
+    form label {
+      font-size: 1.1rem;
+      margin-bottom: 5px;
+      color: white;
+    }
+
+    form input {
+      width: 100%;
+      height: 35px;
+      border-radius: 20px;
+      border: none;
+      padding: 0 15px;
+    }
+
+    .lgnbtn {
+      height: 45px;
+      width: 50%;
+      border-radius: 40px;
+      border: none;
+      background-color: white;
+      color: red;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 1024px) {
+      .redbox {
+        width: 50vw;
+        height: 60vh;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .redbox {
+        width: 80vw;
+        height: auto;
+        padding: 30px 20px;
+      }
+
+      .lgnbtn {
+        width: 100%;
+      }
+
+      form {
+        gap: 25px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .redbox {
+        width: 90vw;
+        padding: 25px 15px;
+      }
+
+      form label {
+        font-size: 1rem;
+      }
+
+      form input {
+        height: 32px;
+      }
+
+      .lgnbtn {
+        font-size: 0.9rem;
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="redbox">
+    <form action="index.html">
+      <div class="inputs">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+      <div class="inputs">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required />
+      </div>
+      <button type="submit" class="lgnbtn">Login</button>
+    </form>
+  </div>
+</body>
+</html>

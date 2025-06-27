@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Video Grid</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgb(231, 80, 80);
+      color: white;
+      height: 60px;
+      padding: 0 20px;
+    }
+
+    nav img {
+      height: 35px;
+      width: auto;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    nav ul li {
+      cursor: pointer;
+    }
+
+    nav button {
+      padding: 6px 12px;
+      border: none;
+      background-color: white;
+      color: rgb(231, 80, 80);
+      font-weight: bold;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .videos {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 30px 10px;
+    }
+
+    .videosinner {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
+    iframe {
+      width: 300px;
+      height: 170px;
+      border-radius: 8px;
+      border: none;
+    }
+
+    /* Responsive Styling */
+    @media (max-width: 992px) {
+      iframe {
+        width: 250px;
+        height: 150px;
+      }
+      nav ul {
+        gap: 10px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 8px;
+        margin: 10px 0;
+      }
+
+      .videosinner {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      iframe {
+        width: 90vw;
+        height: calc(90vw * 9 / 16);
+      }
+    }
+
+    @media (max-width: 480px) {
+      nav button {
+        width: 100%;
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="ytnav">
+    <img src="https://th.bing.com/th/id/OIP.aByvAl4Fl4Dk3N9fA3IudwHaFM?rs=1&pid=ImgDetMain" alt="Logo" />
+    <ul>
+      <li>Home</li>
+      <li>Favourites</li>
+      <li>Popular</li>
+      <li>Gaming</li>
+    </ul>
+    <a href="loginpage.html"><button>Login</button></a>
+  </nav>
+
+  <div class="videos">
+    <div class="videosinner">
+      <iframe src="https://www.youtube.com/embed/o17MF9vnabg" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/o17MF9vnabg" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/o17MF9vnabg" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/o17MF9vnabg" allowfullscreen></iframe>
+    </div>
+    <div class="videosinner">
+      <iframe src="https://www.youtube.com/embed/o17MF9vnabg" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/o17MF9vnabg" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/o17MF9vnabg" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/o17MF9vnabg" allowfullscreen></iframe>
+    </div>
+    <div class="videosinner">
+      <iframe src="https://www.youtube.com/embed/o17MF9vnabg" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/o17MF9vnabg" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/o17MF9vnabg" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/o17MF9vnabg" allowfullscreen></iframe>
+    </div>
+  </div>
+</body>
+</html>
